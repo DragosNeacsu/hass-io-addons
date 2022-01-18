@@ -26,7 +26,7 @@ RUN set -xe \
                 libev \
 				libgcc \
 				libstdc++ \
-     && git clone --branch "main" --depth 1 https://github.com/DragosNeacsu/knxd.git \
+     && git clone --branch "${KNXD_VERSION}" --depth 1 https://github.com/DragosNeacsu/knxd.git \
      && cd knxd \
      && ./bootstrap.sh \
      && ./configure --disable-systemd --enable-tpuart --enable-usb --enable-eibnetipserver --enable-eibnetip --enable-eibnetserver --enable-eibnetiptunnel \
